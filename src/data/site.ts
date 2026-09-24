@@ -7,8 +7,8 @@ export const site = {
   name: { en: 'Junpeng She', zh: '厍俊鹏' } as Bi,
 
   tagline: {
-    en: 'Researcher in quantum information science',
-    zh: '量子信息科学研究者',
+    en: 'I am a researcher, I study quantum.',
+    zh: '我研究量子。',
   } as Bi,
 
   affiliation: { en: 'Tsinghua University', zh: '清华大学' } as Bi,
@@ -19,8 +19,8 @@ export const site = {
   // 留空则 Contact 板块自动隐藏邮箱行
   email: 'sjp24@mails.tsinghua.edu.cn',
 
-  // 换成自己的照片：把文件放进 public/（如 avatar.jpg），这里改成 '/avatar.jpg'
-  avatar: '/avatar.svg',
+  // 换成自己的照片：把文件放进 public/ 并更新此路径
+  avatar: '/avatar.jpg',
 
   // 社交链接：取消注释并填入你的主页即可显示
   social: [

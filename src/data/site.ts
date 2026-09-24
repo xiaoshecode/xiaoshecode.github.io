@@ -8,7 +8,7 @@ export const site = {
 
   tagline: {
     en: 'I am a researcher, I study quantum.',
-    zh: '我研究量子。',
+    zh: '穷究物理，上下求索。',
   } as Bi,
 
   affiliation: { en: 'Tsinghua University', zh: '清华大学' } as Bi,
@@ -25,8 +25,8 @@ export const site = {
   // 社交链接：取消注释并填入你的主页即可显示
   social: [
     { label: 'GitHub', url: 'https://github.com/xiaoshecode' },
+    { label: 'ORCID', url: 'https://orcid.org/0009-0004-4479-9704' },
     // { label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=XXX' },
-    // { label: 'ORCID', url: 'https://orcid.org/0000-0000-0000-0000' },
     // { label: 'CV', url: '/cv.pdf' },
   ],
 };

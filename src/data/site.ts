@@ -4,8 +4,7 @@
 import type { Bi } from '../i18n';
 
 export const site = {
-  // TODO: 换成你的中/英文姓名
-  name: { en: 'Xiaoshe', zh: 'Xiaoshe' } as Bi,
+  name: { en: 'Junpeng She', zh: '厍俊鹏' } as Bi,
 
   tagline: {
     en: 'Researcher in quantum information science',
@@ -17,8 +16,8 @@ export const site = {
 
   location: { en: 'Beijing, China', zh: '中国 · 北京' } as Bi,
 
-  // TODO: 填入邮箱后 Contact 板块会自动显示；留空则隐藏
-  email: '',
+  // 留空则 Contact 板块自动隐藏邮箱行
+  email: 'sjp24@mails.tsinghua.edu.cn',
 
   // 换成自己的照片：把文件放进 public/（如 avatar.jpg），这里改成 '/avatar.jpg'
   avatar: '/avatar.svg',

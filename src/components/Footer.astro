@@ -7,7 +7,7 @@ const updated = new Date().toISOString().slice(0, 10);
 ---
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span>© {year} {site.name.en}</span>
+    <span>© {year} <span data-lang="en">{site.name.en}</span><span data-lang="zh">{site.name.zh}</span></span>
     <span>
       <span data-lang="en">{ui.lastUpdated.en} {updated}</span><span data-lang="zh">{ui.lastUpdated.zh} {updated}</span>
       {' · '}

@@ -15,7 +15,7 @@ const { Content: BioZh } = await render(bioZh);
   <div class="hero-head">
     <img class="avatar" src={site.avatar} alt="" width="92" height="92" />
     <div>
-      <h1 class="name">{site.name.en}</h1>
+      <h1 class="name"><span data-lang="en">{site.name.en}</span><span data-lang="zh">{site.name.zh}</span></h1>
       <p class="tagline">
         <span data-lang="en">{site.tagline.en}</span><span data-lang="zh">{site.tagline.zh}</span>
       </p>

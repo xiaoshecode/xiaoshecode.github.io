@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#f4f2ec"/>
-  <path d="M0 150 Q 50 90, 100 150 T 200 150 T 300 150 T 400 150" fill="none" stroke="#8d887b" stroke-width="2"/>
-  <path d="M0 150 Q 50 210, 100 150 T 200 150 T 300 150 T 400 150" fill="none" stroke="#8d887b" stroke-width="2" opacity="0.55"/>
-  <path d="M0 150 Q 50 120, 100 150 T 200 150 T 300 150 T 400 150" fill="none" stroke="#5f4b8b" stroke-width="2.5"/>
-  <line x1="0" y1="150" x2="400" y2="150" stroke="#c9c5b8" stroke-width="1" stroke-dasharray="3 5"/>
-</svg>

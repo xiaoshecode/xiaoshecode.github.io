@@ -1,16 +1,15 @@
 # 动态列表 —— 新条目加在最上面即可。
 # date 用 "YYYY-MM" 格式；link 为可选。
-- id: n-homepage
-  date: "2025-09"
+- id: n-2026-09-homepage
+  date: "2026-09"
   en: "My homepage is now online."
   zh: "个人主页上线了。"
 
-# 示例（带链接），确认格式后可删除或替换：
-- id: n-example
-  date: "2025-06"
-  en: "Example entry — our paper was accepted. (TODO: replace or delete)"
-  zh: "示例条目 —— 论文被接收。（TODO：替换或删除）"
+- id: n-2026-05-quctrl-bell
+  date: "2026-05"
+  en: "QuCtrl-BELL, our compiler-driven sub-microsecond feedback control stack for trapped-ion experiments, is on arXiv."
+  zh: "我们的离子阱实验编译器驱动亚微秒反馈控制栈 QuCtrl-BELL 已在 arXiv 公开。"
   link:
-    url: "https://github.com/xiaoshecode"
-    en: "link"
-    zh: "链接"
+    url: "https://arxiv.org/abs/2605.22433"
+    en: "arXiv"
+    zh: "arXiv"

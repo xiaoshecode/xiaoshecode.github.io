@@ -1,20 +1,12 @@
 # 论文列表 —— 新的加在最上面。
 # authors 中用 <strong> 标出自己的名字；image 可省略（留空则不显示缩略图）；
-# links 可任意增删（PDF / Code / DOI / arXiv / Slides / Video ...）。
-# 以下两条为占位示例（TODO: 替换为真实论文），缩略图为 public/papers/ 下的占位 SVG。
-- id: pub-example-1
-  title: "Example Paper Title Goes Here (TODO: replace)"
-  authors: "<strong>Xiaoshe</strong>, Alice Smith, Bob Lee"
-  venue: "arXiv preprint, 2025"
-  image: "/papers/ph1.svg"
+# links 可任意增删（PDF / arXiv / Code / DOI / Slides / Video ...）。
+# 缩略图放 public/papers/，建议先压缩（如 800px 宽 JPEG）。
+- id: quctrl-bell
+  title: "QuCtrl-BELL: A Compiler-Driven Sub-Microsecond Feedback Control Stack for Scalable Trapped-Ion Quantum Experiments"
+  authors: "<strong>Junpeng She</strong>, Ruoyu Yan, Zhizhen Qin, Zhanyu Li, Zhongtao Shen, Zichao Zhou, Binxiang Qi, Luming Duan"
+  venue: "arXiv preprint, 2026"
+  image: "/papers/quctrl-bell.jpg"
   links:
-    - { label: "PDF", url: "#" }
-    - { label: "Code", url: "https://github.com/xiaoshecode/cuquantum_benchmark_init" }
-
-- id: pub-example-2
-  title: "Another Paper Title (TODO: replace)"
-  authors: "Alice Smith, <strong>Xiaoshe</strong>"
-  venue: "IEEE QCE, 2024"
-  image: "/papers/ph2.svg"
-  links:
-    - { label: "DOI", url: "#" }
+    - { label: "arXiv", url: "https://arxiv.org/abs/2605.22433" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2605.22433" }

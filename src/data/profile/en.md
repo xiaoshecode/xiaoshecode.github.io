@@ -1,3 +1,3 @@
-I am a researcher at [Tsinghua University](https://www.tsinghua.edu.cn), working on **quantum information science** — with interests in quantum control, quantum circuit simulation, and the software infrastructure behind quantum experiments.
+I am a researcher at [Tsinghua University](https://www.tsinghua.edu.cn), working on **trapped-ion quantum computing** — in particular, control systems and software infrastructure for large-scale quantum experiments. My recent work includes [QuCtrl-BELL](https://arxiv.org/abs/2605.22433), a compiler-driven sub-microsecond feedback control stack.
 
-*(TODO: replace with your own bio — research interests, current projects, what you are looking for, etc.)*
+<!-- 想展开研究方向、招生/合作意向等，直接在这里加段落即可 -->

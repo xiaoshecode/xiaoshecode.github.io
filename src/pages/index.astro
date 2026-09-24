@@ -1,0 +1,44 @@
+---
+// 唯一页面：从数据层取内容，组装组件。
+// 日常维护不需要动这里 —— 改内容去 src/data/，加板块才需要在此加两行。
+import { getCollection, getEntry } from 'astro:content';
+import { site } from '../data/site';
+import { ui } from '../i18n';
+import Base from '../components/Base.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import NewsList from '../components/NewsList.astro';
+import PubList from '../components/PubList.astro';
+import ProjectList from '../components/ProjectList.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const news = await getCollection('news');            // 文件顺序即展示顺序
+const publications = await getCollection('publications');
+const projects = await getCollection('projects');
+const bioEn = await getEntry('profile', 'en');
+const bioZh = await getEntry('profile', 'zh');
+
+const titleEn = `${site.name.en} · ${site.tagline.en}`;
+const titleZh = `${site.name.zh} · ${site.tagline.zh}`;
+---
+<Base titleEn={titleEn} titleZh={titleZh} descEn={site.tagline.en} descZh={site.tagline.zh}>
+  <Header />
+  <main class="wrap" id="top">
+    {bioEn && bioZh && <Hero bioEn={bioEn} bioZh={bioZh} />}
+    <Section id="news" title={ui.news}>
+      <NewsList items={news} />
+    </Section>
+    <Section id="publications" title={ui.publications}>
+      <PubList items={publications} />
+    </Section>
+    <Section id="projects" title={ui.projects}>
+      <ProjectList items={projects} />
+    </Section>
+    <Section id="contact" title={ui.contact}>
+      <Contact />
+    </Section>
+  </main>
+  <Footer />
+</Base>

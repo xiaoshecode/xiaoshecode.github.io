@@ -1,0 +1,41 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { site } from '../data/site';
+
+interface Props {
+  bioEn: CollectionEntry<'profile'>;
+  bioZh: CollectionEntry<'profile'>;
+}
+const { bioEn, bioZh } = Astro.props;
+const { Content: BioEn } = await render(bioEn);
+const { Content: BioZh } = await render(bioZh);
+---
+<section id="about" class="hero reveal">
+  <div class="hero-head">
+    <img class="avatar" src={site.avatar} alt="" width="92" height="92" />
+    <div>
+      <h1 class="name">{site.name.en}</h1>
+      <p class="tagline">
+        <span data-lang="en">{site.tagline.en}</span><span data-lang="zh">{site.tagline.zh}</span>
+      </p>
+      <p class="affil">
+        <a class="u" href={site.affiliationUrl} rel="noopener">
+          <span data-lang="en">{site.affiliation.en}</span><span data-lang="zh">{site.affiliation.zh}</span>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="prose bio" data-lang="en"><BioEn /></div>
+  <div class="prose bio" data-lang="zh"><BioZh /></div>
+
+  <p class="hero-links">
+    {site.email && (
+      <a class="u" href={`mailto:${site.email}`}>{site.email}</a>
+    )}
+    {site.social.map((s) => (
+      <a class="u" href={s.url} rel="noopener">{s.label}</a>
+    ))}
+  </p>
+</section>

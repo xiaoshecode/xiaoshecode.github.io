@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import L from './L.astro';
+
+interface Props {
+  items: CollectionEntry<'news'>[];
+}
+const { items } = Astro.props;
+---
+<ul class="news">
+  {items.map((n) => (
+    <li>
+      <time>{n.data.date}</time>
+      <span class="news-text">
+        <L en={n.data.en} zh={n.data.zh} />
+        {n.data.link && (
+          <>
+            {' '}<a class="u news-link" href={n.data.link.url} rel="noopener">
+              <L en={n.data.link.en} zh={n.data.link.zh} />
+            </a>
+          </>
+        )}
+      </span>
+    </li>
+  ))}
+</ul>

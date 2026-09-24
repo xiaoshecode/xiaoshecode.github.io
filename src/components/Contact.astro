@@ -1,0 +1,18 @@
+---
+import { site } from '../data/site';
+---
+<div class="contact">
+  {site.email && (
+    <p>
+      <a class="u contact-mail" href={`mailto:${site.email}`}>{site.email}</a>
+    </p>
+  )}
+  <p class="contact-loc">
+    <span data-lang="en">{site.location.en}</span><span data-lang="zh">{site.location.zh}</span>
+  </p>
+  <p class="contact-links">
+    {site.social.map((s) => (
+      <a class="u" href={s.url} rel="noopener">{s.label}</a>
+    ))}
+  </p>
+</div>

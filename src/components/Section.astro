@@ -1,0 +1,15 @@
+---
+// 通用板块壳：标题 + 锚点 id + 滚动淡入。
+import type { Bi } from '../i18n';
+import L from './L.astro';
+
+interface Props {
+  id: string;
+  title: Bi;
+}
+const { id, title } = Astro.props;
+---
+<section id={id} class="section reveal">
+  <h2 class="section-title"><L en={title.en} zh={title.zh} /></h2>
+  <slot />
+</section>

@@ -1,0 +1,17 @@
+---
+import { site } from '../data/site';
+import { ui } from '../i18n';
+
+const year = new Date().getFullYear();
+const updated = new Date().toISOString().slice(0, 10);
+---
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© {year} {site.name.en}</span>
+    <span>
+      <span data-lang="en">{ui.lastUpdated.en} {updated}</span><span data-lang="zh">{ui.lastUpdated.zh} {updated}</span>
+      {' · '}
+      <span data-lang="en">{ui.builtWith.en} <a class="u" href="https://astro.build" rel="noopener">Astro</a></span><span data-lang="zh">{ui.builtWith.zh}</span>
+    </span>
+  </div>
+</footer>

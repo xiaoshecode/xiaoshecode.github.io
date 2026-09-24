@@ -1,0 +1,7 @@
+<!-- 占位头像：把真实照片放到 public/avatar.jpg 并修改 src/data/site.ts 中的 avatar 字段 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="98" fill="#f2f0ea"/>
+  <circle cx="100" cy="100" r="62" fill="none" stroke="#b9b4a6" stroke-width="2"/>
+  <ellipse cx="100" cy="100" rx="62" ry="24" fill="none" stroke="#b9b4a6" stroke-width="1.5" opacity="0.6" transform="rotate(-30 100 100)"/>
+  <circle cx="100" cy="100" r="14" fill="#5f4b8b"/>
+</svg>

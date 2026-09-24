@@ -1,0 +1,20 @@
+# 论文列表 —— 新的加在最上面。
+# authors 中用 <strong> 标出自己的名字；image 可省略（留空则不显示缩略图）；
+# links 可任意增删（PDF / Code / DOI / arXiv / Slides / Video ...）。
+# 以下两条为占位示例（TODO: 替换为真实论文），缩略图为 public/papers/ 下的占位 SVG。
+- id: pub-example-1
+  title: "Example Paper Title Goes Here (TODO: replace)"
+  authors: "<strong>Xiaoshe</strong>, Alice Smith, Bob Lee"
+  venue: "arXiv preprint, 2025"
+  image: "/papers/ph1.svg"
+  links:
+    - { label: "PDF", url: "#" }
+    - { label: "Code", url: "https://github.com/xiaoshecode/cuquantum_benchmark_init" }
+
+- id: pub-example-2
+  title: "Another Paper Title (TODO: replace)"
+  authors: "Alice Smith, <strong>Xiaoshe</strong>"
+  venue: "IEEE QCE, 2024"
+  image: "/papers/ph2.svg"
+  links:
+    - { label: "DOI", url: "#" }

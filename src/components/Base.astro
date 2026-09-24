@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import { defaultLang } from '../i18n';
+
+interface Props {
+  titleEn: string;
+  titleZh: string;
+  descEn: string;
+  descZh: string;
+}
+const { titleEn, titleZh, descEn, descZh } = Astro.props;
+---
+<!doctype html>
+<html lang={defaultLang} data-title-en={titleEn} data-title-zh={titleZh}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titleEn}</title>
+    <meta name="description" content={descEn} />
+    <meta property="og:title" content={titleEn} />
+    <meta property="og:description" content={descEn} />
+    <meta property="og:type" content="website" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- 同步初始化：js 标记 + 主题 + 语言，在任何渲染前完成，避免闪烁 -->
+    <script is:inline>
+      (function () {
+        var r = document.documentElement;
+        r.classList.add('js');
+        try {
+          var t = localStorage.getItem('theme');
+          r.dataset.theme = t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          var l = localStorage.getItem('lang');
+          r.lang = l || ((navigator.language || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+        } catch (e) {
+          r.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+    <script>
+      import '../scripts/main.ts';
+    </script>
+  </body>
+</html>

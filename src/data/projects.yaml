@@ -1,0 +1,21 @@
+# 项目列表 —— 新的加在最上面。tag 可省略（显示为小号等宽字体标签）。
+- id: paper4qi
+  name: "paper4qi"
+  url: "https://github.com/xiaoshecode/paper4qi"
+  tag: "Python"
+  en: "A searchable library of quantum computing literature (IEEE QCE & TQE)."
+  zh: "量子计算文献库：收录 QCE / TQE 论文，支持检索、统计与研究脉络梳理。"
+
+- id: cuquantum-benchmark
+  name: "cuquantum_benchmark_init"
+  url: "https://github.com/xiaoshecode/cuquantum_benchmark_init"
+  tag: "Python"
+  en: "Benchmarks for cuQuantum-based quantum circuit simulation."
+  zh: "基于 cuQuantum 的量子线路模拟基准测试。"
+
+- id: seeso4keyboard
+  name: "seeso4keyboard"
+  url: "https://github.com/xiaoshecode/seeso4keyboard"
+  tag: "C++"
+  en: "Keyboard utility project, 2023 fall."
+  zh: "键盘工具项目（2023 秋）。"

@@ -1,0 +1,10 @@
+---
+// 双语行内组件：两种语言都渲染进 DOM，由 CSS 按 <html lang> 显隐，切换零请求。
+// en/zh 允许内嵌简单 HTML（如 <strong>、<a>），内容来自本站数据文件，可信。
+interface Props {
+  en: string;
+  zh: string;
+}
+const { en, zh } = Astro.props;
+---
+<span data-lang="en" set:html={en} /><span data-lang="zh" set:html={zh} />

@@ -2,6 +2,9 @@
 
 极简双语（中/EN）学术主页。Astro 静态构建，GitHub Actions 自动部署，零 JS 框架、零 webfont。
 
+- [访问主页](https://xiaoshecode.github.io/)
+- [在线维护文档与检查记录](https://xiaoshecode.github.io/xiaoshecode/repos/xiaoshecode.github.io/)
+
 ## 日常维护（只改 `src/data/`，不用碰组件）
 
 | 想改什么 | 改哪里 |
@@ -24,13 +27,28 @@
 ## 本地开发
 
 ```bash
-npm install
+npm ci            # 使用已提交的锁文件，保持依赖可复现
 npm run dev       # http://localhost:4321
 npm run build     # 构建到 dist/（上线前自检）
 npm run preview   # 预览构建产物
 ```
 
 push 到 `main` 后 GitHub Actions 自动构建部署。
+
+开发环境使用 Node.js 22.12+（或较新 LTS）和 npm。提交前运行 `npm run build`，依赖变更后运行 `npm audit` 并检查锁文件差异。构建校验内容集合与静态产物，不替代浏览器交互检查，也不是完整的 TypeScript 类型检查。
+
+## 代码结构
+
+- `src/pages/`：页面入口，组合各个展示组件。
+- `src/components/`：布局、简介、论文、项目和联络信息。
+- `src/data/`：中英文文案和结构化内容。
+- `src/content.config.ts`：内容集合和字段约束。
+- `src/scripts/main.ts`：主题、语言和滚动交互。
+- `src/styles/global.css`：全站样式与响应式布局。
+- `public/`：直接复制到产物的图片等资源。
+- `dist/`：构建生成目录，已忽略，无需手工修改。
+
+保留数据、组件和样式的分层；文案修改优先在 `src/data/` 完成。不要提交 `node_modules/` 或 `dist/`。
 
 ## 设计说明
 

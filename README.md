@@ -4,6 +4,7 @@
 
 - [访问主页](https://xiaoshecode.github.io/)
 - [在线维护文档与检查记录](https://xiaoshecode.github.io/xiaoshecode/repos/xiaoshecode.github.io/)
+- [本次维护与验证范围](MAINTENANCE.md)
 
 ## 日常维护（只改 `src/data/`，不用碰组件）
 
@@ -35,7 +36,7 @@ npm run preview   # 预览构建产物
 
 push 到 `main` 后 GitHub Actions 自动构建部署。
 
-开发环境使用 Node.js 22.12+（或较新 LTS）和 npm。提交前运行 `npm run build`，依赖变更后运行 `npm audit` 并检查锁文件差异。构建校验内容集合与静态产物，不替代浏览器交互检查，也不是完整的 TypeScript 类型检查。
+开发环境使用 Node.js 22.19+（或较新 LTS）和 npm；锁文件中的 `undici` 要求至少 Node.js 22.19。提交前运行 `npm run build`，依赖变更后运行 `npm audit` 并检查锁文件差异。构建校验内容集合与静态产物，不替代浏览器交互检查，也不是完整的 TypeScript 类型检查。
 
 ## 代码结构
 
